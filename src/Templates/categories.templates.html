@@ -1,0 +1,15 @@
+  <div class="subtitles">
+    <a ui-sref="home">Home</a> &lt; <span>List Categories</span>
+  </div>
+  <div> 
+    <h2>List Categories</h2>
+  </div>
+  &nbsp
+  <table class="table table-striped">
+    <tr ng-repeat="item in categoriesListController.categoriesList">
+       <td>{{$index + 1}}</td> 
+       <td> <a ui-sref="items({categoryShortName: item.short_name})">{{ item.short_name }}</a> </td>
+       <td><a ui-sref="items({categoryShortName: item.short_name})">{{ item.name }}</a></td>
+       <td>{{item.special_instructions}}</td>
+    </tr>
+  </table>
